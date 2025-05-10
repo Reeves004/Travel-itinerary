@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2: Moonlit Culture | Tokyo Adventure</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --moon-pink: #ff9ff3;
+            --moon-blue: #1dd1a1;
+            --moon-purple: #5f27cd;
+            --moon-yellow: #feca57;
+            --moon-bg: #0a0e3f;
+            --moon-text: #ffffff;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--moon-bg);
+            color: var(--moon-text);
+            min-height: 100vh;
+        }
+        
+        .moon-card {
+            background: rgba(10, 14, 63, 0.7);
+            border: 1px solid var(--moon-blue);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(29, 209, 161, 0.2);
+        }
+        
+        .moon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(29, 209, 161, 0.4);
+        }
+        
+        .moon-nav {
+            background: rgba(10, 14, 63, 0.9);
+            border-bottom: 1px solid var(--moon-pink);
+        }
+        
+        .moon-img {
+            border-radius: 10px;
+            border: 2px solid var(--moon-yellow);
+            box-shadow: 0 0 15px rgba(254, 202, 87, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .time-badge {
+            background: var(--moon-purple);
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Star background animation */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Star Background -->
+    <div class="stars" id="stars"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark moon-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span style="color: var(--moon-blue);">✨</span> Tokyo Moon Adventure
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="day1.html">Day 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="day2.html">Day 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packing.html">Packing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="message.html">Message from the Moonwatchers!!</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 style="color: var(--moon-blue);">Day 2: Moonlit Culture</h1>
+            <p class="lead">Tradition meets the future!</p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-8">
+                <!-- Morning -->
+                <div class="moon-card p-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="time-badge badge rounded-pill me-3">Morning</span>
+                        <h3 class="mb-0" style="color: var(--moon-blue);">Senso-ji Temple</h3>
+                    </div>
+                    <p>Visit Tokyo's most famous temple in Asakusa.</p>
+                    <img src="images/d2temple.jpg" alt="Senso-ji Temple" class="moon-img img-fluid w-100 mb-3">
+                </div>
+                
+                <!-- Afternoon -->
+                <div class="moon-card p-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="time-badge badge rounded-pill me-3">Afternoon</span>
+                        <h3 class="mb-0" style="color: var(--moon-pink);">Ueno Park & Museums</h3>
+                    </div>
+                    <p>Stroll through beautiful Ueno Park and visit world-class museums.</p>
+                    <img src="images/d2park.jpg" alt="Ueno Park" class="moon-img img-fluid w-100 mb-3">
+                </div>
+                
+                <!-- Evening -->
+                <div class="moon-card p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="time-badge badge rounded-pill me-3">Evening</span>
+                        <h3 class="mb-0" style="color: var(--moon-yellow);">Odaiba Waterfront</h3>
+                    </div>
+                    <p>Experience the futuristic Rainbow Bridge and waterfront area.</p>
+                    <img src="images/d2rainbow.jpg" alt="Rainbow Bridge" class="moon-img img-fluid w-100 mb-3">
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="index.html" class="btn" style="
+                        background: linear-gradient(45deg, var(--moon-blue), var(--moon-purple));
+                        color: white;
+                        border: none;
+                        padding: 10px 25px;
+                        border-radius: 50px;
+                    ">
+                        <i class="bi bi-arrow-left"></i> Back to Itinerary
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p class="mb-0">Never running from a real fight! ✨</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Star Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const starsContainer = document.getElementById('stars');
+            const starsCount = 100;
+            
+            for (let i = 0; i < starsCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                const size = Math.random() * 2 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                
+                starsContainer.appendChild(star);
+            }
+        });
+    </script>
+</body>
+</html>
